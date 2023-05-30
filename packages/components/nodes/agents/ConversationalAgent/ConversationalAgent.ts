@@ -88,7 +88,7 @@ class ConversationalAgent_Agents implements INode {
 
         const obj: InitializeAgentExecutorOptions = {
             agentType: 'chat-conversational-react-description',
-            verbose: verbose
+            verbose: true
         }
 
         const agentArgs: any = {}
