@@ -56,6 +56,24 @@ class ConversationalAgent_Agents implements INode {
                 rows: 4,
                 optional: true,
                 additionalParams: true
+            },
+             {
+                label: 'verbose',
+                name: 'verbose',
+                type: 'options',
+                options: [
+                    {
+                        label: 'true',
+                        name: 'true'
+                    },
+                    {
+                        label: 'false',
+                        name: 'false'
+                    }
+                ],
+                default: 'true',
+                additionalParams: true,
+                optional: true
             }
         ]
     }
@@ -70,7 +88,7 @@ class ConversationalAgent_Agents implements INode {
 
         const obj: InitializeAgentExecutorOptions = {
             agentType: 'chat-conversational-react-description',
-            verbose: process.env.DEBUG === 'true' ? true : false
+            verbose: verbose
         }
 
         const agentArgs: any = {}
